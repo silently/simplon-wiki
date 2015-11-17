@@ -21,3 +21,11 @@ Les "branches" en anglais https://gist.github.com/jbenet/ee6c9ac48068889b0912
 Lire les 3 premières parties de https://fr.wikipedia.org/wiki/%C3%89l%C3%A9ment_HTML
 
 Anti-sèche en anglais https://media-mediatemple.netdna-ssl.com/wp-content/uploads/images/html5-cheat-sheet/html5-cheat-sheet.pdf
+
+## Github pages
+
+Permet de convertir un dépôt git (plus précisément sa branche gh-pages) en un site web hébergé sur github.io, voir https://pages.github.com/
+
+## Chercher l'info
+
+Comment poster des questions http://www.linux-france.org/article/these/smart-questions/smart-questions-fr.html
