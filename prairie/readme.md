@@ -26,6 +26,14 @@ Anti-sèche en anglais https://media-mediatemple.netdna-ssl.com/wp-content/uploa
 
 Permet de convertir un dépôt git (plus précisément sa branche gh-pages) en un site web hébergé sur github.io, voir https://pages.github.com/
 
+## CSS
+
+Initiation au positionnement en français http://www.alsacreations.com/article/lire/533-initiation-au-positionnement-en-css.html
+
+Le positionnement des éléments (en anglais) http://www.barelyfitz.com/screencast/html-training/css/positioning/
+
+Tout sur les floats https://css-tricks.com/all-about-floats/
+
 ## Chercher l'info
 
 Comment poster des questions http://www.linux-france.org/article/these/smart-questions/smart-questions-fr.html
