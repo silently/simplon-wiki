@@ -34,6 +34,18 @@ Le positionnement des éléments (en anglais) http://www.barelyfitz.com/screenca
 
 Tout sur les floats https://css-tricks.com/all-about-floats/
 
+## Twitter Bootstrap
+
+Un tuto en français http://www.opentuto.com/informatique/maitriser-bootstrap-3-par-la-pratique/
+
+La doc officielle http://getbootstrap.com/
+
+Et les fichiers CSS/JS en ligne http://getbootstrap.com/getting-started/#download-cdn
+
+Openclassrooms https://openclassrooms.com/courses/prenez-en-main-bootstrap/mise-en-route-8
+
+
+
 ## Chercher l'info
 
 Comment poster des questions http://www.linux-france.org/article/these/smart-questions/smart-questions-fr.html
