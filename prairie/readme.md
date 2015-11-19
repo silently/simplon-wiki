@@ -36,8 +36,6 @@ Tout sur les floats https://css-tricks.com/all-about-floats/
 
 ## Twitter Bootstrap
 
-Un tuto en français http://www.opentuto.com/informatique/maitriser-bootstrap-3-par-la-pratique/
-
 La doc officielle http://getbootstrap.com/
 
 Et les fichiers CSS/JS en ligne http://getbootstrap.com/getting-started/#download-cdn
