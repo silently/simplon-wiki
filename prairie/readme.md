@@ -36,6 +36,8 @@ Tout sur les floats https://css-tricks.com/all-about-floats/
 
 Block VS inline https://la-cascade.io/la-difference-entre-block-et-inline/
 
+Challenge mondrian (ne pas faire les bordures noires) https://bowiestie.files.wordpress.com/2010/03/bildschirmfoto-2010-03-14-um-03-00-05.png
+
 ## Twitter Bootstrap
 
 La doc officielle http://getbootstrap.com/
