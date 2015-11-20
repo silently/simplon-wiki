@@ -1,6 +1,6 @@
-# Un site responsive pour le petit prince
+# Un site responsive pour le Petit Prine
 
-Objectif : un site (sur github pages) par personne.
+Objectif : un site (sur github pages) par personne contenant les 4 premiers chapitres du Petit Prince
 
 Instructions :
 - faire une barre de navigation fixée en haut de la page, avec quatre liens (Chapitre 1, Chapitre 2...) permettant de sauter au bon chapitre sur la page
@@ -13,12 +13,13 @@ Instructions :
 - tous les paragraphes dans... des paragraphes
 - inclure des images et éventuellement des glyphicons (http://getbootstrap.com/components/#glyphicons)
 - utiliser certaines classes Bootstrap pour enrichir la mise en page (ex: well)
+- si toutes les instructions sont remplies, ajouter sa patte
 
 Moyens :
+- créer un repository nommé "ex-petit-prince"
 - Twitter Bootstrap
 - inclure en &lt;link&gt; bootstrap.css et ensuite un fichier style.css
 - ne travailler que dans le index.html et le style.css
-
 
 ## Extrait
 
