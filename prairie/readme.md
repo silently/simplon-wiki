@@ -34,8 +34,6 @@ Le positionnement des éléments (en anglais) http://www.barelyfitz.com/screenca
 
 Tout sur les floats https://css-tricks.com/all-about-floats/
 
-Block VS inline https://la-cascade.io/la-difference-entre-block-et-inline/
-
 Challenge mondrian (ne pas faire les bordures noires) https://bowiestie.files.wordpress.com/2010/03/bildschirmfoto-2010-03-14-um-03-00-05.png
 
 ## Twitter Bootstrap
@@ -49,6 +47,12 @@ Openclassrooms https://openclassrooms.com/courses/prenez-en-main-bootstrap/mise-
 Une anti-sèche http://creativealive.com/wp-content/uploads/2014/01/bootstrap3-cheatsheet.pdf
 
 
-## Chercher l'info
+## Avant la semaine 01
+
+Block VS inline https://la-cascade.io/la-difference-entre-block-et-inline/
+
+Pratiquer git sur codecademy https://www.codecademy.com/zh/learn/learn-git
+
+Relire le positionnement des éléments (en anglais) http://www.barelyfitz.com/screencast/html-training/css/positioning/
 
 Comment poster des questions http://www.linux-france.org/article/these/smart-questions/smart-questions-fr.html
