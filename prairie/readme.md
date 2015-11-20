@@ -34,6 +34,8 @@ Le positionnement des éléments (en anglais) http://www.barelyfitz.com/screenca
 
 Tout sur les floats https://css-tricks.com/all-about-floats/
 
+Block VS inline https://la-cascade.io/la-difference-entre-block-et-inline/
+
 ## Twitter Bootstrap
 
 La doc officielle http://getbootstrap.com/
@@ -42,6 +44,7 @@ Et les fichiers CSS/JS en ligne http://getbootstrap.com/getting-started/#downloa
 
 Openclassrooms https://openclassrooms.com/courses/prenez-en-main-bootstrap/mise-en-route-8
 
+Une anti-sèche http://creativealive.com/wp-content/uploads/2014/01/bootstrap3-cheatsheet.pdf
 
 
 ## Chercher l'info
