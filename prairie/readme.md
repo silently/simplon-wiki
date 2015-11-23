@@ -1,5 +1,12 @@
 # Ressources utilisées pendant la prairie
 
+## Vu pendant la prairie
+- intro HTML, CSS
+- git, github, github pages
+- linux et ligne de commande
+- chrome developer tools
+- exposés de chacun sur thème : HTML5, phonegap, react, angular, arduino, JSON, responsive, scrum, extreme programming, big data, licence GPL
+
 ## Linux
 
 Une introduction en français http://www.audeladelherbeseche.fr/unix/index.html
