@@ -30,9 +30,17 @@ p {
 }
 
 /* sélecteur par attribut, avec des règles évoluées sur la valeur de l'attribut, ici: class contient 'col-' */
-[class~=col-] {
+div[class*=col-] {
   float: left;
 }
+a[href*=https] {
+
+}
+img[src*=flickr] {
+
+}
+a[href*=pdf]
+
 
 /* pseudo sélecteur suivant l'état de l'élément */
 p:nth-child(2n+1) {

@@ -1,8 +1,7 @@
 # Programme semaine 10
 
-## En vrac
+## CSS
 
-- créer des clés SSH pour github
-- git merge conflicts
-- un groupe prépare un exposé
-- conventions/style
+Une intro aux sélécteurs http://iamvdo.me/blog/ce-que-vous-avez-toujours-voulu-savoir-sur-css
+
+Exercices faits en cours : https://github.com/silently/ex-01-css
