@@ -1,0 +1,91 @@
+/* sélecteur universel, à éviter */
+
+* {
+  line-height: 1.2em;
+}
+
+/* sélecteur par type d'élement: body, span, ul... */
+p {
+  margin: 0 0 12px;
+}
+
+/* sélecteur par ID, plus fort qu'une classe, mais doit rester unique sur une page donnée, et un élément n'a qu'un ID. Usage moins courant que les classes */
+#second {
+  color: #000;
+  background: #eeeeee;
+}
+
+#third {
+  color: #000;
+  background: #555555;
+}
+
+/* sélecteur par classe. Un élément peut avoir plusieurs classes et une classe peut s'appliquer à plusieurs éléments */
+.alt {
+  color: #678989;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+/* sélecteur par attribut, avec des règles évoluées sur la valeur de l'attribut, ici: class contient 'col-' */
+[class~=col-] {
+  float: left;
+}
+
+/* pseudo sélecteur suivant l'état de l'élément */
+p:nth-child(2n+1) {
+  line-height: 1.6em;
+}
+
+p:last-child {
+  margin-bottom: 30px;
+}
+
+/* combinaison du type d'élément et d'une classe */
+p.strong {
+  font-weight: bold;
+}
+
+/* combinaisons du type d'élément, d'une classe et d'une pseudo-sélécteur */
+
+a.strong:hover {
+  color: blue;
+}
+
+/* s'applique à un p suivant un autre p (dans le même parent) */
+p + p {
+  font-variant: small-caps;
+}
+
+/* sélecteur suivant une arborescence : ici s'applique pour un élément ayant une classe et un ancêtre .container */
+.container .alt {
+  color: #ff0000;
+  color: rgba(255, 0, 0, .5);
+}
+
+
+
+/* sélecteur suivant une arborescence : ici s'applique pour un élément ayant une classe et un parent direct .container */
+.container > .alt {
+
+}
+
+/* on applique la même règle à plusieurs sélecteurs en les séparant par des virgules */
+p.strong, .container span.alt {
+}
+
+/* margin et padding multi valeurs */
+p {
+  /* tous les côtés */
+  margin: 12px;
+  /* TB LR */
+  margin: 12px 0px;
+  /* T LR B */
+  margin: 12px 0px 20px;
+  /* T L B R */
+  margin: 12px 0px 20px 0px;
+  /* spécifie le côté */
+  margin-bottom: 12px;
+}
