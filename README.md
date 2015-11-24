@@ -14,6 +14,7 @@ $ sudo apt-get install gpick
 - node, npm et jasmine
 ```
 $ sudo apt-get install -y nodejs
+$ sudo apt-get install -y npm
 $ sudo apt-get install -y build-essential
 $ sudo npm install -g jasmine
 ```
