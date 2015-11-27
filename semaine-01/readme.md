@@ -15,45 +15,64 @@ Un résumé en français http://gafish.fr/nouveautes-css3/
 Est-ce que je peux utiliser ces fonctionnalités ? http://caniuse.com/
 
 
-## Intro Javascript
+## Analogie Javascript et langue française
 
-### La grammaire JS
+### Grammaire
 
-- ponctuation `, ; ( ) { } ? :`
-- conjonctions de subordination `if else switch while for`
-- pronom `var`
-- groupe nominal : valeurs littérales `1 "un" [1] { prop: 1} function() {}`
+Des éléments de la grammaire française traduits en JS :
+- ponctuation `, ; ( ) { }`
+- logique et conjonctions de subordination ~ contrôle `if else switch while for`
+- nom : données/valeurs `1 "un" [1] { prop: 1} function() {}`
+- pronom (prend la place d'un nom) `var`
 - il y a des mots "invariables" `true false`
-- verbes :
-  - opérateurs .[]() typeof = + - ! * / % > < <= >= !== === && || ? : ++ --  new += return
-  - fonctions
-  - méthodes
+- verbes : opérateurs, fonctions et méthodes
 
-Exemples d'utilisation des verbes :
+### Champ lexical
+
+Si on admet l'analogie "nom en français" <=> "données en JS", on peut comparer le champ lexical au type de données :
+- données de type primitif :
+  - booléens `true false` (espace de valeurs invariable)
+  - nombres `1 1.1 1e4`
+  - chaînes de caractères `"aujourd'hui"` ou `'aujourd\'hui'`
+  - symbols
+  - valeur nulle `null`
+  - valeur non définie `undefined`
+- les objets
+  - objet générique `{ propriété: "valeur", autre: 2 }`
+  - tableaux `[1, 2, 3]`
+  - plus tous les types qu'on veut créer, ceux d'ES6...
+
+TODO et les functions?
+TODO portée des variables
+
+### Les verbes en actions
+
 ```
 // operator
 var result = x + y;
-// function
+// invocation de fonction
 result = add(x, y);
-// method
+// invocation de méthode
 result = x.add(y);
 ```
+
+Quelques opérateurs .[]() typeof = + - ! * / % > < <= >= !== === && || ? : ++ --  new += return ? :
 
 ### Orthographe JS
 
 - un nom de variable est une lettre optionnellement suivie par une ou plusieurs lettres, chiffres et _
 - il existe des mots réservés par le langage, et donc interdits dans le noms de variables `if function else var`...
 - les valeurs littérales :
-  - pour un nombre  `3.1e2`
-  - une chaîne de caractère `"aujourd'hui"` ou `'aujourd\'hui'`
-  - un tableau (array) `[]`
-  - un objet `{ propriété: "valeur", autre: 2 }`
-  - une fonction `function(arguments) { "body"; }`
+  - pour un nombre  `10 2.5 3.1e2`
+  - une chaîne de caractère
+  - un tableau (array) `[1, 2, 3]`
+  - un objet
+  - une fonction `function myFunction(arguments) { "body"; }`
   - une expression régulière `/ab+c/`
 
 ### Conjugaison JS
 
-Les différentes manières d'enclencher les actions/verbes
+Les différentes manières d'enclencher les actions/verbes (invocation, apply, call)
 
 ### Vocabulaire JS
 
