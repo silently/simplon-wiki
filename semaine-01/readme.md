@@ -40,9 +40,9 @@ Si on admet l'analogie "nom en français" <=> "données en JS", on peut comparer
 - les objets
   - objet générique `{ propriété: "valeur", autre: 2 }`
   - tableaux `[1, 2, 3]`
-  - plus tous les types qu'on veut créer, ceux d'ES6...
+  - plus tous les types qu'on veut créer, ceux d'ES6 (Map, Set)...
+- les fonctions (et oui un verbe peut servir de nom "tricher n'est pas jouer")
 
-TODO et les functions?
 TODO portée des variables
 
 ### Les verbes en actions
