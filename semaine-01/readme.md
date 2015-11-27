@@ -37,6 +37,7 @@ var result = x + y;
 result = add(x, y);
 // method
 result = x.add(y);
+```
 
 ### Orthographe JS
 
