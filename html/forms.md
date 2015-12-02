@@ -82,7 +82,6 @@ On voit donc :
 - `name` sert à l'envoi au serveur
 - `id` et `name` sont complémentaires et n'ont pas connaissance l'un de l'autre
 
-Pour continuer :
-- voir comment former des `<select>` et des options
-- mettre en page un formulaire
-- faire des traitement en javascript sur un formulaire
+## Références
+
+Un [guide](https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires) par Mozilla Foundation et (en anglais) [styler vos formulaires](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms) grâce à CSS3
