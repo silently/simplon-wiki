@@ -15,6 +15,7 @@ $ sudo apt-get install -y nodejs
 $ sudo apt-get install -y npm
 $ sudo apt-get install -y build-essential
 $ sudo npm install -g jasmine
+$ sudo npm install http-server -g
 ```
 
 Packages intéressants pour atom :
