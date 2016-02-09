@@ -43,8 +43,6 @@ A compléter !
 | constantes | `const one = 1;` | `define('ONE', 1);` |
 | conversion en entier | `var i = parseInt(22/3);` | `$i = (int) (22/3);`
 
-- Date VS DateTime
-
 ## Différences notables
 
 ### Environnement d'exécution
@@ -65,7 +63,7 @@ Il existe ensuite deux types dits composés (compound en anglais) et déjà disc
 - `array`
 - `object`
 
-Le modèle objet permet offre une API au travers de classes à instancier, par exemple `DateTime`.
+Le modèle objet offre une API au travers de classes à instancier, par exemple `DateTime`.
 
 Enfin, deux types spéciaux :
 - `resource` (pour se lier à une ressource externe, par exemple une base de donnée)
@@ -91,9 +89,9 @@ En effet `var arr = [1, 2, 3];` est plus fréquent que : `var arr = new Array(1,
 
 ### Objets, tableaux, tableaux associatifs
 
-**En JS**, l'implémentation des objets repose sur les tableaux associatifs (aussi appelés *map*), un type abstrait qui associe des clefs à des valeurs. On parle aussi de collections de propriétés (une propriété = une clef + une valeur).
+**En JS**, l'implémentation des objets repose sur les tableaux associatifs, un type abstrait qui associe des clefs à des valeurs. On parle aussi de collections de propriétés (une propriété = une clef + une valeur).
 
-On peut donc directement définir un objet depuis une valeur littérale : `var obj = { prop1: 'val1', prop2: val2 };`. Si on préfère une instantiation depuis un constructeur `var obj = new MyClass();` l'objet aura toujours la forme d'un tableau associatif (dont les clefs/valeurs sont initialisées par `MyClass`).
+On peut donc directement définir un objet depuis une valeur littérale : `var obj = { prop1: 'val1', prop2: val2 };`. Même si on préfère une instantiation depuis un constructeur `var obj = new MyClass();` l'objet aura toujours la forme d'un tableau associatif (dont les clefs/valeurs sont initialisées par `MyClass`).
 
 Toujours en JavaScript, un tableau `var arr = ["abc", 2];` est similaire à un tableau associatif dont les clefs sont les index, par exemple la valeur `"abc"` est associée à la clef `0` (index 0 du tableau).
 
@@ -103,7 +101,7 @@ Toujours en JavaScript, un tableau `var arr = ["abc", 2];` est similaire à un t
 
 Le type tableau permet autant de créer un tableau simple `$a = [1, 2, 3, 4];` qu'un tableau associatif  `$a = ["prop1" => "val1", "prop2" => "val2"];`.
 
-Le type objet nécessite qu'une classe (ici `foo`) soit définie `$bar = new foo;`.
+Le type objet nécessite qu'une classe (ici `Foo`) soit définie `$bar = new Foo();`.
 
 **En résumé pour PHP** : objets et tableaux sont deux types différents, il ne faut notamment pas confondre objets et tableaux associatifs. C'est pourquoi les opérateurs de raffinement ne sont pas les mêmes : `$a[]` pour un tableau, `$o->prop` pour un objet.
 
@@ -127,9 +125,9 @@ Entre guillemets simples la chaîne de caractère n'est **pas** interpolée, et 
 
 ### Rappel : les chaînes de caractères en JS
 
-En JS, contrairement au PHP, guillemets simples **et** doubles procèdent toujours à l'interprétation des séquences spéciales (commençant par un `\`) et jamais à une interpolation des variables.
+En JS, contrairement au PHP, guillemets simples **et** doubles procèdent toujours à l'interprétation des séquences spéciales (commençant par un `\`) et jamais à une interpolation des variables. Ils ont donc un effet similaire.
 
-ECMAScript 6 a cependant introduit une nouvelle notation avec les accents graves (backticks) qui permet l'interpolation des variables : `\valeur de ma ${variable}\``
+ECMAScript 6 a cependant introduit une nouvelle notation avec les accents graves (backticks) qui permet l'interpolation des variables : `\`valeur de ma ${variable}\``
 
 ### Les + du langage PHP
 
