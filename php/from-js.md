@@ -25,7 +25,7 @@ Comme JavaScript, PHP :
 A compléter !
 
 | | JS | PHP |
-| - | - | - |
+| --- | --- | --- |
 | gestionnaire de dépendances | npm | compose |
 | lancer un interpréteur interactif depuis le terminal | `$ node`  | `$ php -a` |
 | serveur HTTP en environnement de développement | `$ node app.js` où app.js implémente le serveur | `$ php -S localhost:8000` (regarder la doc pour voir toutes les options) |
@@ -137,7 +137,7 @@ ECMAScript 6 a cependant introduit une nouvelle notation avec les accents graves
 - un modèle plus strict de portée des variables (une variable définie dans une fonction n'est jamais visible à l'extérieur, et l'intérieur d'une fonction ne voit pas par défaut son contexte extérieur).
 - aux namespaces (deux variables ayant le même nom mais appartenant à des namespaces différents n'entrent pas en conflit). En effet les variables définies dans un namespace donné ne sont **pas** globales.
 
-Il existe cependant des cas où il est intéressant d'utiliser le contexte extérieur dans une fonction, il faut alors être **explicite** (alors qu'en JS on peut implicitement accéder à tout le monde extérieur).
+Il existe cependant des cas où il est intéressant d'utiliser le contexte extérieur dans une fonction, il faut alors être **explicite** (alors qu'en JS on peut implicitement accéder au monde extérieur).
 
 Pour une variable globale (utiliser `global`) :
 
