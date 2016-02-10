@@ -127,7 +127,7 @@ Entre guillemets simples la chaîne de caractère n'est **pas** interpolée, et 
 
 En JS, contrairement au PHP, guillemets simples **et** doubles procèdent toujours à l'interprétation des séquences spéciales (commençant par un `\`) et jamais à une interpolation des variables. Ils ont donc un effet similaire.
 
-ECMAScript 6 a cependant introduit une nouvelle notation avec les accents graves (backticks) qui permet l'interpolation des variables : `\`valeur de ma ${variable}\``
+ECMAScript 6 a cependant introduit une nouvelle notation avec les accents graves (backticks) qui permet l'interpolation des variables : `` `valeur de ma ${variable}` ``
 
 ### Les + du langage PHP
 
@@ -173,11 +173,11 @@ echo welcome();
 
 ## Quelques spécificités de PHP
 
-Il existe des variables statiques qui, définies à l'intérieur d'une fonction gardent leur valeur entre deux appels.
+Il existe des variables statiques qui, définies à l'intérieur d'une fonction, gardent leur valeur entre deux appels.
 
 A compléter...
 
-## Un exemple
+## Un exemple dans les 2 langages
 
 En PHP :
 ```php
@@ -194,7 +194,7 @@ $names = convertUpper($names);
 En JavaScript :
 ```javascript
 function convertUpper(names)  {
-  for(i = 0; i < names.length; i++) {
+  for(var i = 0; i < names.length; i++) {
     names[i] = names[i].toUpperCase();
   }
   return names;
