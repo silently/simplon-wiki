@@ -37,6 +37,7 @@ A compléter !
 | afficher le contenu d'une variable | `console.log` | `var_dump` |
 | concaténation de caractères | `+` | `.` |
 | commentaires | `//` `/* */` | `//` `/* */` `#` |
+| séparer une chaîne de caractère VS rassembler depuis un tableau | `split` VS `join` | `explode` VS `implode` |
 | tout ce qui est faux | `false` `0` `""` `NaN` `null` `undefined` | `false` `0` `0.0` `""` `"0"` `NULL` empty arrays and objects |
 | nom des variables | commence par `_` `$` ou une lettre (minuscule ou majuscule). Peuvent suivre ces mêmes caractères ainsi que des chiffres | même règle mais le nom de variable est **toujours** préfixé par un `$` |
 | destruction d'une variable | `delete x;` | `unset($x);` |
@@ -199,6 +200,6 @@ function convertUpper(names)  {
   }
   return names;
 }
-var names = { ‘michael’, ‘john’, ‘samantha’ };
+var names = ['michael', 'john', 'samantha'];
 names = convertUpper(names);
 ```
