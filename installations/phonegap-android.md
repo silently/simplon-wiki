@@ -26,5 +26,4 @@ Et donc pour vérifier que tout a marché et lancer un projet phonegap via ionic
 ```$ ionic start iotest blank
 $ cd iotest
 $ ionic platform add android
-$ ionic run android
-```
+$ ionic run android```
