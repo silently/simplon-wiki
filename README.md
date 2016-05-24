@@ -8,3 +8,7 @@ Le déroulé des semaines est posté sur simplonline, ici sont mises en ligne de
 - [Photoshop](https://github.com/silently/simplon-wiki/raw/master/assets/photoshop-marc.pdf) par Marc
 - [React](http://abysstechnique.github.io/reactjs/indexreact.html#/) par Simon
 - [SQL](https://cody13x.github.io/Presentation-SQL/#/) par Yannick
+
+## Quelques notes de cours
+
+-  [Installation Phonegap et pont Android](https://github.com/silently/simplon-wiki/blob/master/installations/phonegap-android.md)
