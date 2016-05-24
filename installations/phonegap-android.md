@@ -23,7 +23,9 @@ mode développeur activé), si on fait :
 
 Et donc pour vérifier que tout a marché et lancer un projet phonegap via ionic, aller dans son répertoire projets et faire :
 
-```$ ionic start iotest blank
+```
+$ ionic start iotest blank
 $ cd iotest
 $ ionic platform add android
-$ ionic run android```
+$ ionic run android
+```
