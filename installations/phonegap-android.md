@@ -1,5 +1,7 @@
 # Installation phonegap avec une cible Android
 
+TODO mtpfs + PATH (voir google docs)
+
 Installer une version récente de node.js (>= 4)
 
 Mettre à jour npm
@@ -20,6 +22,7 @@ mode développeur activé), si on fait :
 ```$ adb devices```
 
 → il doit être listé (on voit un identifiant unique)
+→ sinon voir [ce sujet]( http://askubuntu.com/questions/632651/adb-devices-command-wont-detect-my-4-4-android-phone)
 
 Et donc pour vérifier que tout a marché et lancer un projet phonegap via ionic, aller dans son répertoire projets et faire :
 
