@@ -17,7 +17,7 @@ $ gzip -d data-people.sql
 $ mysql -u root -p
 ```
 
-Remarque : on a ouvert une session mysql root car on videra le `query cache` (expliqué un peu plus loin).
+Remarque : on a ouvert une session mysql avec le user root car on videra le `query cache` (expliqué un peu plus loin).
 
 ```
 > SHOW DATABASES;
@@ -96,7 +96,9 @@ Query OK, 0 rows affected (0.00 sec)
 1 row in set (1.08 sec)
 ```
 
-Si on veut avoir des détails sur cette requête, on demande une explication
+On voit de nouveau un temps supérieur à une seconde (sur ma machine).
+
+Si on veut avoir des détails sur cette requête, on demande une explication (on peut ajouter EXPLAIN avant n'importe quelle requête, elle ne sera pas exécutée mais MySQL nous explique ce qu'il a à disposition pour le faire)
 
 ```
 > EXPLAIN SELECT COUNT(*) FROM people WHERE surname = "Wong";
@@ -108,7 +110,7 @@ Si on veut avoir des détails sur cette requête, on demande une explication
 1 row in set (0.00 sec)
 ```
 
-Créons un index sur surname
+Ici, on voit qu'un index sur surname serait bien venu.
 
 ```
 > CREATE INDEX surname_index on people (surname);
@@ -158,7 +160,7 @@ Lançons désormais une recherche sur les emails qui ne sont pas indexés :
 1 row in set (1.07 sec)
 ```
 
-La première requête est effectuée beaucoup plus rapidement que la seconde qui n'a été satisfaite que pour la dernière ligne de la table (et donc il aura fallu parcourir tout la table)... Ce qu'on va améliorer en créant un index.
+La première requête est effectuée beaucoup plus rapidement (satisfaite pour l'id 3) que la seconde qui n'a été satisfaite que pour la dernière ligne de la table (et donc il aura fallu parcourir tout la table)... Ce qu'on va améliorer en créant un index.
 
 ```
 > CREATE INDEX email_index on people (email);
@@ -182,13 +184,13 @@ La première requête est effectuée beaucoup plus rapidement que la seconde qui
 1 row in set (0.00 sec)
 ```
 
-On peut lister les index crééés jusqu'à présilently
+On peut lister les index crééés jusqu'à présent :
 
 ```
 > SHOW INDEX FROM fulltext.people;
 ```
 
-On peut faire des recherches sur une partie d'une chaîne de caractère
+On peut aussi faire des recherches sur une partie d'une chaîne de caractère
 
 ```
 > SELECT COUNT(*) FROM people WHERE surname LIKE "W%";
@@ -226,7 +228,7 @@ MySQL refuse de créer cet index si on ne spécifie pas combien de caractères o
 Query OK, 0 rows affected (1.44 sec)
 ```
 
-Mais donc seuls les 100 premiers caractères seront pris en compte. Il est temps de passer à un index [FULLTEXT](https://openclassrooms.com/courses/administrez-vos-bases-de-donnees-avec-mysql/index-1) et pour cela il faut utiliser le moteur [MYISAM](https://openclassrooms.com/courses/les-moteurs-de-stockage-de-mysql-2).
+Mais donc seuls les 100 premiers caractères seront pris en compte. Il est temps de passer à un index [FULLTEXT](https://openclassrooms.com/courses/administrez-vos-bases-de-donnees-avec-mysql/index-1) et pour cela il faut utiliser le moteur [MYISAM](https://openclassrooms.com/courses/les-moteurs-de-stockage-de-mysql-2). Avec ce moteur on pourra chercher n'importe quel mot dans la colonne biography.
 
 ```
 > ALTER TABLE  `people` ENGINE = MYISAM ;
@@ -252,7 +254,7 @@ On peut désormais utiliser MATCH AGAINST
 1 row in set (0.23 sec)
 ```
 
-Si on omet IN BOOLEAN MODE, on est implicitement en IN NATURAL LANGUAGE MODE et, attention :
+Si on omet IN BOOLEAN MODE, on est implicitement IN NATURAL LANGUAGE MODE et là, attention :
 
 ```
 > SELECT COUNT(*) FROM people WHERE MATCH (biography) against ('aliquam' IN NATURAL LANGUAGE MODE);
@@ -264,9 +266,9 @@ Si on omet IN BOOLEAN MODE, on est implicitement en IN NATURAL LANGUAGE MODE et,
 1 row in set (0.10 sec)
 ```
 
-On a aussi aucun résultat car `aliquam` est tellement courant (96749 occurences) que le moteur ne le considère pas comme pertinent et ne l'indexe pas.
+On a ici aucun résultat car `aliquam` est tellement courant (96749 occurences) que le moteur ne le considère pas comme pertinent et ne l'indexe pas.
 
-Le BOOLEAN MODE permet aussi de faire des recherches excluant telle chaîne de caractère, ou commençant par certaines lettres (wildcard *, contrairement au % de WHERE LIKE) :
+Le BOOLEAN MODE permet de faire des recherches excluant telle chaîne de caractère, ou commençant par certaines lettres (wildcard *, contrairement au % de WHERE LIKE) :
 
 ```
 > SELECT COUNT(*) FROM people WHERE MATCH (biography) against ('lor*' IN BOOLEAN MODE);+----------+
