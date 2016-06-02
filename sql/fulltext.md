@@ -14,10 +14,10 @@ Ci-dessous `$` indique une ligne de commande linux et `>` désigne la console my
 ```
 $ cd fulltext
 $ gzip -d data-people.sql
-$ mysql -u root -p```
+$ mysql -u root -p
+```
 
 Remarque : on a ouvert une session mysql root car on videra le `query cache` (expliqué un peu plus loin).
-
 
 ```
 > SHOW DATABASES;
@@ -33,9 +33,11 @@ Remarque : on a ouvert une session mysql root car on videra le `query cache` (ex
   PRIMARY KEY (`id`)
 ) AUTO_INCREMENT=1;
 > SHOW TABLES;
-> SHOW COLUMNS FROM people;```
+> SHOW COLUMNS FROM people;
+```
 
 On insère les données dans la table et on lance quelques SELECT
+
 ```
 > source data-people.sql;
 > SELECT count(*) FROM people;
@@ -53,7 +55,8 @@ On insère les données dans la table et on lance quelques SELECT
 Première recherce avec WHERE
 
 ```
-> SELECT id, firstname, surname FROM people WHERE firstname = "Colby" LIMIT 1;```
+> SELECT id, firstname, surname FROM people WHERE firstname = "Colby" LIMIT 1;
+```
 
 Et maintenant une opération coûteuse (plus d'une seconde !) car tout le contenu de la base doit être inspecté.
 
@@ -64,7 +67,8 @@ Et maintenant une opération coûteuse (plus d'une seconde !) car tout le conten
 +----------+
 |       95 |
 +----------+
-1 row in set (1.06 sec)```
+1 row in set (1.06 sec)
+```
 
 La mise en cache des résultats donne un temps instantané
 
@@ -79,6 +83,7 @@ La mise en cache des résultats donne un temps instantané
 ```
 
 Mais si on vide le cache...
+
 ```
 > reset query cache;
 Query OK, 0 rows affected (0.00 sec)
@@ -88,7 +93,8 @@ Query OK, 0 rows affected (0.00 sec)
 +----------+
 |       95 |
 +----------+
-1 row in set (1.08 sec)```
+1 row in set (1.08 sec)
+```
 
 Si on veut avoir des détails sur cette requête, on demande une explication
 
@@ -103,6 +109,7 @@ Si on veut avoir des détails sur cette requête, on demande une explication
 ```
 
 Créons un index sur surname
+
 ```
 > CREATE INDEX surname_index on people (surname);
 Query OK, 0 rows affected (1.23 sec)
@@ -172,9 +179,11 @@ La première requête est effectuée beaucoup plus rapidement que la seconde qui
 +--------+-----------+---------+
 | 100000 | Alexa     | Gould   |
 +--------+-----------+---------+
-1 row in set (0.00 sec)```
+1 row in set (0.00 sec)
+```
 
 On peut lister les index crééés jusqu'à présilently
+
 ```
 > SHOW INDEX FROM fulltext.people;
 ```
@@ -201,7 +210,6 @@ On peut faire des recherches sur une partie d'une chaîne de caractère
 
 La seconde requête est un peu plus lente car les index partent de la gauche.
 
-
 ## Recherches sur un champ TEXT
 
 Un champ TEXT peut contenir des chaînes de caractères plus longues (voir le [cours openclassroom sur les types de données MySQL](https://openclassrooms.com/courses/administrez-vos-bases-de-donnees-avec-mysql/les-types-de-donnees)).
@@ -225,6 +233,7 @@ Mais donc seuls les 100 premiers caractères seront pris en compte. Il est temps
 ```
 
 Et on créé un index FULLTEXT (ça prend du temps) :
+
 ```
 > CREATE FULLTEXT INDEX index_biography ON people (biography);
 Query OK, 100000 rows affected (37.20 sec)
@@ -291,4 +300,4 @@ Records: 100000  Duplicates: 0  Warnings: 0
 $ gzip data-people.sql.gz
 ```
 
-Ou alors on supprimer le fichier.
+Ou alors on supprime le fichier.
