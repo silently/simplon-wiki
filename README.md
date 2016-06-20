@@ -8,6 +8,7 @@ Le déroulé des semaines est posté sur simplonline, ici sont mises en ligne de
 - [Photoshop](https://github.com/silently/simplon-wiki/raw/master/assets/photoshop-marc.pdf) par Marc
 - [React](http://abysstechnique.github.io/reactjs/indexreact.html#/) par Simon
 - [SQL](https://cody13x.github.io/Presentation-SQL/#/) par Yannick
+- [Apprentissage par répétition espacée](https://slides.com/abdel-malikbouali/deck-1/live#/) par Abdel-Malik
 
 ## Quelques notes de cours
 
